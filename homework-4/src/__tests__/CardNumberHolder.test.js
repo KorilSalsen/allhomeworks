@@ -1,5 +1,5 @@
 import React from 'react';
-import CardNumberHolder from '../CardNumberHolder';
+import CardNumberHolder from '../components/CardNumber/CardNumberHolder';
 import {shallow} from 'enzyme';
 
 describe('Компонент CardNumberHolder', () => {

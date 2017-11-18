@@ -1,0 +1,27 @@
+.component-list {
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.component-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.component-list__name {
+    color: darkgray;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+
+.component-list__name.active, .component-list__name:hover {
+    color: #000;
+}
+
+.component-list__name:last-child {
+    margin-right: 0;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
-import ModalButton from '../ModalButton';
-import Modal from '../Modal';
+import ModalButton from '../components/Modal/ModalButton';
+import Modal from '../components/Modal/Modal';
 import {shallow} from 'enzyme';
 
 describe('Компонент ModalButton', () => {

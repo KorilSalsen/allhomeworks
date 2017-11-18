@@ -1,0 +1,14 @@
+input {
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid blue;
+    width: 100%;
+    transition: 0.3s;
+    font-size: 14px;
+    outline: none;
+    animation: fade-in 0.3s forwards;
+}
+
+input:focus {
+    box-shadow: 0 0 8px 0 deepskyblue;
+}
