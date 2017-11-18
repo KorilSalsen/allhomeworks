@@ -1,0 +1,37 @@
+.header {
+  background: lightblue;
+  border-radius: 0 0 5px 5px;
+  margin-bottom: 24px;
+}
+
+.menu {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu-link {
+  display: block;
+  padding: 20px 15px;
+  transition: 0.3s;
+  font-style: 16px;
+  text-transform: uppercase;
+  border-right: solid 1px rgba(255, 255, 255, 0.2);
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-link:last-child {
+  border-right: none;
+}
+
+.menu-link:hover,
+.menu-link.active {
+  background: dodgerblue;
+  color: white;
+}

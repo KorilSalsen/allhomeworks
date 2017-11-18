@@ -1,0 +1,69 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.field {
+  padding: 10px;
+  border: 1px solid darkblue;
+  border-radius: 3px;
+  font-style: 14px;
+  transition: 0.3s;
+  margin-bottom: 16px;
+}
+
+.field:last-child {
+  margin-bottom: 0;
+}
+
+.field:hover {
+  border-color: blue;
+}
+
+.field:focus {
+  border-color: blue;
+  box-shadow: 0 0 8px 0 deepskyblue;
+}
+
+.button {
+  padding: 10px;
+  border-radius: 3px;
+  border: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: white;
+  background: deepskyblue;
+  cursor: pointer;
+  transition: 0.3s;
+  outline: none;
+}
+
+.button:hover {
+  box-shadow: -2px 5px 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+.error {
+  border-radius: 3px;
+  background: firebrick;
+  color: white;
+  font-size: 14px;
+  margin: 0;
+  padding: 0 10px;
+  animation: slide-in 0.2s forwards;
+}
+
+@keyframes slide-in {
+  from {
+    height: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  to {
+    height: auto;
+    margin-bottom: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
