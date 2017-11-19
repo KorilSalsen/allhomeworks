@@ -1,0 +1,52 @@
+.order {
+  padding: 10px 30px 10px 10px;
+  background-color: #d1d1ff;
+  border-radius: 3px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.order-title {
+  margin-bottom: 16px;
+}
+
+.move-btn {
+  cursor: pointer;
+  position: absolute;
+  width: 30px;
+  right: 0;
+  top: 0;
+  height: 100%;
+  opacity: 0;
+  transition: 0.3s;
+  border-radius: 0 3px 3px 0;
+}
+
+.move-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.move-btn:before {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border: 1px solid;
+  border-color: black black transparent transparent;
+  margin-left: -3px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.order:hover .move-btn {
+  opacity: 1;
+}
+
+.order:hover {
+  box-shadow: 3px 5px 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+.order:active {
+  box-shadow: 1px 3px 12px 0 rgba(0, 0, 0, 0.3);
+}
