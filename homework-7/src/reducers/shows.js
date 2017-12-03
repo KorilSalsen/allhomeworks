@@ -1,20 +1,35 @@
 import { handleActions } from 'redux-actions';
 
-import {
-  searchFetchRequest,
-  searchFetchReject,
-  searchFetchSuccess
-} from '../actions/shows';
+import { showRequest, showReject, showSuccess } from '../actions/shows';
 
 const initialState = {
-  show: null
+  isFetching: false,
+  isFetched: false,
+  show: null,
+  error: null
 };
 
 export default handleActions(
   {
-    [searchFetchRequest]: (state, action) => state,
-    [searchFetchReject]: (state, action) => state,
-    [searchFetchSuccess]: (state, action) => state
+    [showRequest]: (state, action) => ({
+      ...state,
+      isFetching: true,
+      isFetched: false
+    }),
+    [showReject]: (state, action) => ({
+      ...state,
+      isFetching: false,
+      isFetched: false,
+      error: action.payload,
+      show: null
+    }),
+    [showSuccess]: (state, action) => ({
+      ...state,
+      isFetching: false,
+      isFetched: true,
+      show: action.payload,
+      error: null
+    })
   },
   initialState
 );

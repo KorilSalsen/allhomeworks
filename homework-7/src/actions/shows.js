@@ -1,11 +1,7 @@
 import { createActions } from 'redux-actions';
 
-export const {
-  searchFetchRequest,
-  searchFetchReject,
-  searchFetchSuccess
-} = createActions({
-  SHOWS: {
-    FETCH: { REQUEST: undefined, REJECT: undefined, SUCCESS: undefined }
-  }
+export const { showRequest, showReject, showSuccess } = createActions({
+  SHOW_REQUEST: undefined,
+  SHOW_REJECT: undefined,
+  SHOW_SUCCESS: undefined
 });

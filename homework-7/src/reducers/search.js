@@ -1,33 +1,35 @@
 import { handleActions } from 'redux-actions';
 
-import {
-  searchFetchRequest,
-  searchFetchReject,
-  searchFetchSuccess
-} from '../actions/search';
+import { searchRequest, searchReject, searchSuccess } from '../actions/search';
 
 const initialState = {
   isFetching: false,
-  isFedched: false,
-  result: []
+  isFetched: false,
+  result: [],
+  error: null
 };
 
 export default handleActions(
   {
-    [searchFetchRequest]: (state, action) => {
-      return { ...state, isFetching: true, isFedched: false };
-    },
-    [searchFetchReject]: (state, action) => {
-      return { ...state, isFetching: false, isFedched: false };
-    },
-    [searchFetchSuccess]: (state, action) => {
-      return {
-        ...state,
-        isFetching: false,
-        isFedched: true,
-        result: action.payload
-      };
-    }
+    [searchRequest]: (state, action) => ({
+      ...state,
+      isFetching: true,
+      isFetched: false
+    }),
+    [searchReject]: (state, action) => ({
+      ...state,
+      isFetching: false,
+      isFetched: false,
+      error: action.error,
+      result: []
+    }),
+    [searchSuccess]: (state, action) => ({
+      ...state,
+      isFetching: false,
+      isFetched: true,
+      result: action.payload,
+      error: null
+    })
   },
   initialState
 );

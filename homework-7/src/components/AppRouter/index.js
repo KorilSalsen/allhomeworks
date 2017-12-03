@@ -7,7 +7,7 @@ import ShowPage from '../ShowPage';
 class AppRouter extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="container">
         <Switch>
           <Route path="/" exact component={Search} />
           <Route path="/shows/:id" component={ShowPage} />

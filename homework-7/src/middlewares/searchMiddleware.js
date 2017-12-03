@@ -1,18 +1,14 @@
 import { search } from '../api';
-import {
-  searchFetchRequest,
-  searchFetchReject,
-  searchFetchSuccess
-} from '../actions/search';
+import { searchRequest, searchReject, searchSuccess } from '../actions/search';
 
 export default store => next => action => {
-  if (action.type === searchFetchRequest.toString()) {
+  if (action.type === searchRequest.toString()) {
     search(action.payload)
       .then(shows => {
-        store.dispatch(searchFetchSuccess(shows));
+        store.dispatch(searchSuccess(shows));
       })
       .catch(error => {
-        store.dispatch(searchFetchReject(error));
+        store.dispatch(searchReject(error));
       });
   }
 

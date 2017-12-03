@@ -1,15 +1,7 @@
 import { createActions } from 'redux-actions';
 
-export const {
-  search: {
-    fetch: {
-      request: searchFetchRequest,
-      reject: searchFetchReject,
-      success: searchFetchSuccess
-    }
-  }
-} = createActions({
-  SEARCH: {
-    FETCH: { REQUEST: undefined, REJECT: undefined, SUCCESS: undefined }
-  }
+export const { searchRequest, searchReject, searchSuccess } = createActions({
+  SEARCH_REQUEST: undefined,
+  SEARCH_REJECT: undefined,
+  SEARCH_SUCCESS: undefined
 });
