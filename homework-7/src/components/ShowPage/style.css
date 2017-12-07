@@ -27,6 +27,7 @@
 .more-link:hover,
 .back:hover {
   border-bottom: 1px dashed;
+  margin-bottom: -1px;
 }
 
 .more-link:after,

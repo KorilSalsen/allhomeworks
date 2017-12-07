@@ -24,11 +24,19 @@ class ShowPage extends Component {
       <div className="shows wrapper">
         {isFetching && <div className="loading">Loading...</div>}
         {error && <div className="error">Connection error</div>}
+        <div>
+          <a href="" className="back" onClick={this.onBack}>
+            Back
+          </a>
+        </div>
         {show && (
           <div>
             <h1>{show.name}</h1>
             <div className="img-wrapper">
-              <img src={show.image.medium} alt={show.name} />
+              {show.image &&
+                show.image.medium && (
+                  <img src={show.image.medium} alt={show.name} />
+                )}
             </div>
             <div
               className="about"
@@ -39,11 +47,6 @@ class ShowPage extends Component {
             </a>
           </div>
         )}
-        <div>
-          <a href="" className="back" onClick={this.onBack}>
-            Back
-          </a>
-        </div>
       </div>
     );
   }
